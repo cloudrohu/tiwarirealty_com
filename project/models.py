@@ -58,7 +58,7 @@ class Residential_Project(MPTTModel):
     image = models.ImageField(upload_to='images/')
     slider = models.BooleanField(default=False)
     featured_project = models.BooleanField(default=False)
-    slug = models.SlugField(unique=True, null=True, blank=True)
+    slug = models.SlugField(max_length=500,unique=True, null=True, blank=True)
     create_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
 
